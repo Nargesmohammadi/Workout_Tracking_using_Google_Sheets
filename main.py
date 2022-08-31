@@ -1,5 +1,6 @@
 import requests
 from datetime import datetime
+from requests.auth import HTTPBasicAuth
 
 N_API_KEY = ""
 N_APP_ID = ""
@@ -10,8 +11,8 @@ exercise_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 exercise_text = input("Tell me witch exercises you did today?: ")
 
 exercise_headers = {
-    "x-app-id": "e3e62c62",
-    "x-app-key": "3243e3259727c2e5375c70d655a1fbe7",
+    "x-app-id": N_APP_ID,
+    "x-app-key": N_APP_ID,
 }
 
 params = {
@@ -34,6 +35,14 @@ for exercise in result["exercises"]:
             "calories": exercise["nf_calories"]
         }
     }
-    sheet_response = requests.post(sheet_endpoint, json=sheet_input)
-    print(sheet_response)
+    # Basic Authentication
+    basic = HTTPBasicAuth('', '')
+    # sheet_response = requests.post(sheet_endpoint, json=sheet_input)
+    # print(sheet_response)
 
+    # Bearer Token Authentication
+    bearer_headers = {
+        "Authorization": ""
+    }
+    sheet_response = requests.post(sheet_endpoint, json=sheet_input, headers=bearer_headers)
+    print(sheet_response)
