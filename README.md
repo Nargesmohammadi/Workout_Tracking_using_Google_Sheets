@@ -1,2 +1,3 @@
 # Workout_Tracking_using_Google_Sheets
-#This challenge project builds an exercise tracking application using Python and Google sheets.
+#This challenging project builds an exercise-tracking application using Python and Google sheets. We will write down the exercises we did in regular English sentences. After running the code, activities will be logged, and the date and time will be added too. It works out the number of calories that we expend doing that activity. We expect the time the duration comes from my input, and the calories are calculated automatically.
+In this project, I have used the python data time, strftime method, using APIs, making post requests, creating authorization headers, and environment variables.
