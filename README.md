@@ -13,28 +13,3 @@ This is a simple workout tracking program that uses Google Sheets as its databas
 - Run the program: `python main.py`
 
 The program will prompt you to enter your workout data and store it in the Google Sheet.
-
-## Methods
-
-### `authenticate_google()`
-
-This method authenticates the user's credentials by creating a flow object and launching a web server to request authorization from the user.
-
-### `get_workout_data()`
-
-This method prompts the user to input their workout data (date, exercise, and duration) and returns it as a list.
-
-### `add_workout_data(sheets_api, spreadsheet_id, range_name, workout_data)`
-
-This method adds a new row to the Google Sheet with the workout data specified by the user.
-
-### `main()`
-
-This method serves as the entry point to the program. It calls the above methods in sequence to authenticate the user, get the workout data, and add it to the Google Sheet.
-
-## Dependencies
-
-- `google-auth`
-- `google-auth-oauthlib`
-- `google-auth-httplib2`
-- `google-api-python-client`
